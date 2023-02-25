@@ -26,14 +26,12 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void CalculateTotal_DeterminesTotalPrice_Int()
     {
-      int loaf = 1;
+      int loaf = 7;
       Bread newBread = new Bread(loaf);
       int numberOfLoafs = newBread.Loaf;
       int results = newBread.CalculateTotal(numberOfLoafs);
-      Assert.AreEqual(5, results);
+      Assert.AreEqual(25, results);
     }
-
-
 
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
@@ -45,11 +43,22 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void GetPastry1_ReturnsPastry1_Int()
     {
-      int pastry1 = 1;
-      Pastry newPastry = new Pastry(pastry1);
-      int result = newPastry.Pastry1;
-      Assert.AreEqual(pastry1, result);
+      int pastries = 1;
+      Pastry newPastry = new Pastry(pastries);
+      int result = newPastry.Pastries;
+      Assert.AreEqual(pastries, result);
     }
+
+    [TestMethod]
+    public void CalculatePastryTotal_DeterminesTotalPrice_Int()
+    {
+      int pastries = 2;
+      Pastry newPastry = new Pastry(pastries);
+      int numberofPastries = newPastry.Pastries;
+      int results = newPastry.CalculatePastryTotal(numberofPastries);
+      Assert.AreEqual(4, results);
+    }
+
 
   }
 }

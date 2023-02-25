@@ -52,11 +52,11 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void CalculatePastryTotal_DeterminesTotalPrice_Int()
     {
-      int pastries = 2;
+      int pastries = 5;
       Pastry newPastry = new Pastry(pastries);
       int numberofPastries = newPastry.Pastries;
       int results = newPastry.CalculatePastryTotal(numberofPastries);
-      Assert.AreEqual(4, results);
+      Assert.AreEqual(8, results);
     }
 
 

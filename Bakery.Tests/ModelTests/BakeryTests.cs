@@ -31,5 +31,15 @@ namespace PierreBakery.Tests
       Assert.AreEqual(loaf, result);
     }
 
+    [TestMethod]
+    public void GetPastry1_ReturnsPastry1_Int()
+    {
+      int pastry1 = 1;
+      Pastry newPastry = new Pastry(pastry1);
+      int result = newPastry.Side1;
+      Assert.AreEqual(pastry1, result);
+    }
+
+
   }
 }

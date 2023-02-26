@@ -15,7 +15,8 @@ Console application that informs user how much the loaves and pastries cost at P
 Clone repository to your desktop 
 CD to the directory/PierreBakery
 Enter in the following commands: dotnet restore and dotnet build
-To view and test the application run command: dotnet run 
+To view and test the application run command: dotnet run
+For Testing CD to: ModelTests, and run dotnet restore. 
 
 # Known bugs: 
 No bugs 

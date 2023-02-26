@@ -1,8 +1,6 @@
-
-
 namespace PierreBakery.Models
 {
-  public abstract class Bread
+  public class Bread
   {
     private int _loaf;
     public int Loaf

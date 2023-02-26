@@ -9,11 +9,12 @@ class Program
     Console.WriteLine("Bread goes for $ 5 a Loaf, and Pastry are $2 each.");
     int numOfLoaves = GetLoafAmount();
     int numOfPastries = GetPastriesAmount();
-    ConfirmToContinueOrder(GenerateTotalAmount(numOfLoaves, numOfPastries));
+    int currentTotalCost = GenerateTotalAmount(numOfLoaves, numOfPastries);
+    Console.WriteLine("Your Total Cost Is: $ " + currentTotalCost);
+    ConfirmToContinueOrder(currentTotalCost);
 
-    static void ConfirmToContinueOrder(int totalCost)
-    {
-      Console.WriteLine("Total Cost Is: $ " + totalCost);
+    static void ConfirmToContinueOrder(int currentTotalCost)
+    {  
       Console.WriteLine("Did you want to add more to your order? Enter 'yes' to proceed, or 'no' if you are finish");
       string userInput = Console.ReadLine();
       if (userInput == "yes")
@@ -21,14 +22,14 @@ class Program
         int numOfLoaves = GetLoafAmount();
         int numOfPastries = GetPastriesAmount();
         int newTotalCost = GenerateTotalAmount(numOfLoaves, numOfPastries);
-        
-
-
-
+        int results = currentTotalCost + newTotalCost;
+        Console.WriteLine("New Total Cost Is: $ " + results);
+        ConfirmToContinueOrder(results);
+      
       }
       else
       {
-        Console.WriteLine("Have a nice day!:");
+        Console.WriteLine("Well Have a Nice Day!:");
       }
     }
 

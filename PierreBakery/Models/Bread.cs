@@ -2,7 +2,7 @@
 
 namespace PierreBakery.Models
 {
-  public abstract class Bread
+  public class Bread
   {
     private int _loaf;
     public int Loaf
@@ -16,19 +16,18 @@ namespace PierreBakery.Models
       
     }
 
-    public int CalculateTotal(int numOfLoaf)
+    public int CalculateBreadTotal(int numOfLoaf)
     {
       int totalPrice = 0;
-      int noChargeLoaf = 0;
       for (int i = 0; i <= numOfLoaf; i++)
       {
         if (i % 3 == 0)
         {
-          totalPrice = totalPrice + noChargeLoaf;
+          totalPrice+=0;
         }
         else
         {
-          totalPrice = totalPrice + 5;
+          totalPrice+=5; 
         }
       }
       return totalPrice;

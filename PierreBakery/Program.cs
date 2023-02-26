@@ -39,7 +39,7 @@ class Program
       int loaves = Convert.ToInt32(Console.ReadLine());
       Bread newBread = new Bread(loaves);
       int numOfLoaves = newBread.Loaf;
-      int resultsForBread = newBread.CalculateTotal(numOfLoaves);
+      int resultsForBread = newBread.CalculateBreadTotal(numOfLoaves);
       return resultsForBread;
 
     }

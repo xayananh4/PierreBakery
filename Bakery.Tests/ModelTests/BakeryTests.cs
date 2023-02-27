@@ -16,8 +16,9 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    //NEW TEST FOR QUANTITY PROPERTY 
     [TestMethod]
-    public void GetSide1_ReturnsSide1_Int()
+    public void GetQuantiy_ReturnsQuantiy_Int()
     {
       int quantity = 1;
       Bread newTriangle = new Bread(quantity);
@@ -25,24 +26,34 @@ namespace Bakery.Tests
       Assert.AreEqual(quantity, result);
     }
 
-    [TestMethod]
-    public void GetLoaf_ReturnsLoaf_Int()
+    // Test the cal total function 
+        [TestMethod]
+    public void CalTotal_DeterminestheTotalPrice_Int()
     {
-      int loaf = 1;
-      Bread newBread = new Bread(loaf);
-      int result = newBread.Loaf;
-      Assert.AreEqual(loaf, result);
+      int quantity = 1;
+      Bread newBread = new Bread(1); 
+      int results = newBread.CalTotal(quantity); 
+      Assert.AreEqual(2, results);
     }
 
-    [TestMethod]
-    public void CalculateTotal_DeterminesTotalPrice_Int()
-    {
-      int loaf = 7;
-      Bread newBread = new Bread(loaf);
-      int numberOfLoafs = newBread.Loaf;
-      int results = newBread.CalculateBreadTotal(numberOfLoafs);
-      Assert.AreEqual(25, results);
-    }
+    // [TestMethod]
+    // public void GetLoaf_ReturnsLoaf_Int()
+    // {
+    //   int loaf = 1;
+    //   Bread newBread = new Bread(loaf);
+    //   int result = newBread.Loaf;
+    //   Assert.AreEqual(loaf, result);
+    // }
+
+    // [TestMethod]
+    // public void CalculateTotal_DeterminesTotalPrice_Int()
+    // {
+    //   int loaf = 7;
+    //   Bread newBread = new Bread(loaf);
+    //   int numberOfLoafs = newBread.Loaf;
+    //   int results = newBread.CalculateBreadTotal(numberOfLoafs);
+    //   Assert.AreEqual(25, results);
+    // }
 
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()

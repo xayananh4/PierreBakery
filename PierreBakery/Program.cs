@@ -25,7 +25,7 @@ class Program
         int results = currentTotalCost + newTotalCost;
         Console.WriteLine("New Total Cost Is: $ " + results);
         ConfirmToContinueOrder(results);
-      
+   
       }
       else
       {
@@ -35,22 +35,22 @@ class Program
 
     static int GetLoafAmount()
     {
-      // Console.WriteLine("How many loaves of bread do you want:");
-      // int loaves = Convert.ToInt32(Console.ReadLine());
-      // Bread newBread = new Bread(loaves);
-      // int numOfLoaves = newBread.Loaf;
-      // int resultsForBread = newBread.CalculateBreadTotal(numOfLoaves);
-      return 0;
+      Console.WriteLine("How many loaves of bread do you want:");
+      int loaves = Convert.ToInt32(Console.ReadLine());
+      Bread newBread = new Bread(loaves);
+      int numOfLoaves = newBread.Quantity;
+      int resultsForBread = newBread.CalTotal(numOfLoaves);
+      return resultsForBread;
 
     }
     static int GetPastriesAmount()
     {
-      // Console.WriteLine("How many pastries do you want:");
-      // int pastries = Convert.ToInt32(Console.ReadLine());
-      // Pastry newPastry = new Pastry(pastries);
-      // int numOfPastries = newPastry.Pastries;
-      // int resultsForPastries = newPastry.CalculatePastryTotal(numOfPastries);
-      return 0;
+      Console.WriteLine("How many pastries do you want:");
+      int pastries = Convert.ToInt32(Console.ReadLine());
+      Pastry newPastry = new Pastry(pastries);
+      int numOfPastries = newPastry.Quantity;
+      int resultsForPastries = newPastry.CalTotal(numOfPastries);
+      return resultsForPastries;
     }
 
     static int GenerateTotalAmount(int numOfLoaves, int numOfPastries)
@@ -58,8 +58,6 @@ class Program
       int totalCost = numOfLoaves + numOfPastries;
       return totalCost;
     }
-
-
 
   }
 }

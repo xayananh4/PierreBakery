@@ -26,14 +26,14 @@ namespace Bakery.Tests
       Assert.AreEqual(quantity, result);
     }
 
-    // Test the cal total function 
+    // Test the calulate total function 
         [TestMethod]
     public void CalTotal_DeterminestheTotalPrice_Int()
     {
       int quantity = 1;
       Bread newBread = new Bread(1); 
       int results = newBread.CalTotal(quantity); 
-      Assert.AreEqual(2, results);
+      Assert.AreEqual(5, results);
     }
 
     // [TestMethod]

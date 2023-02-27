@@ -2,9 +2,9 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierreBakery.Models;
 
-namespace Bakery.Tests
+namespace Pastries.Tests
 {
-  // TEST FOR BREAD CLASS 
+
 
   [TestClass]
   public class PastryTests
@@ -23,6 +23,16 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry(pastries);
       int result = newPastry.Quantity;
       Assert.AreEqual(pastries, result);
+    }
+
+    // Test the calulate total function 
+    [TestMethod]
+    public void CalTotal_DeterminesTheTotalPrice_Int()
+    {
+      int quantity = 1;
+      Pastry newPastry = new Pastry(1);
+      int results = newPastry.CalTotal(quantity);
+      Assert.AreEqual(2, results);
     }
 
 

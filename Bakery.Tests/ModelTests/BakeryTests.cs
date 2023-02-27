@@ -2,8 +2,10 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierreBakery.Models;
 
-namespace PierreBakery.Tests
+namespace Bakery.Tests
 {
+  // TEST FOR BREAD CLASS 
+
   [TestClass]
   public class BakeryTests
   {
@@ -29,7 +31,7 @@ namespace PierreBakery.Tests
       int loaf = 7;
       Bread newBread = new Bread(loaf);
       int numberOfLoafs = newBread.Loaf;
-      int results = newBread.CalculateTotal(numberOfLoafs);
+      int results = newBread.CalculateBreadTotal(numberOfLoafs);
       Assert.AreEqual(25, results);
     }
 

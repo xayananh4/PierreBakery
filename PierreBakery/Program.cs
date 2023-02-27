@@ -35,22 +35,22 @@ class Program
 
     static int GetLoafAmount()
     {
-      Console.WriteLine("How many loaves of bread do you want:");
-      int loaves = Convert.ToInt32(Console.ReadLine());
-      Bread newBread = new Bread(loaves);
-      int numOfLoaves = newBread.Loaf;
-      int resultsForBread = newBread.CalculateBreadTotal(numOfLoaves);
-      return resultsForBread;
+      // Console.WriteLine("How many loaves of bread do you want:");
+      // int loaves = Convert.ToInt32(Console.ReadLine());
+      // Bread newBread = new Bread(loaves);
+      // int numOfLoaves = newBread.Loaf;
+      // int resultsForBread = newBread.CalculateBreadTotal(numOfLoaves);
+      return 0;
 
     }
     static int GetPastriesAmount()
     {
-      Console.WriteLine("How many pastries do you want:");
-      int pastries = Convert.ToInt32(Console.ReadLine());
-      Pastry newPastry = new Pastry(pastries);
-      int numOfPastries = newPastry.Pastries;
-      int resultsForPastries = newPastry.CalculatePastryTotal(numOfPastries);
-      return resultsForPastries;
+      // Console.WriteLine("How many pastries do you want:");
+      // int pastries = Convert.ToInt32(Console.ReadLine());
+      // Pastry newPastry = new Pastry(pastries);
+      // int numOfPastries = newPastry.Pastries;
+      // int resultsForPastries = newPastry.CalculatePastryTotal(numOfPastries);
+      return 0;
     }
 
     static int GenerateTotalAmount(int numOfLoaves, int numOfPastries)

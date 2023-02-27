@@ -1,11 +1,13 @@
 namespace PierreBakery.Models
 {
-  public class Dough
+  public abstract class Dough
   {
-    public Dough()
-    {
+   public int Quantity { get; set; }
+   public abstract int CalTotal(int Quantity);
+    // public Dough()
+    // {
 
-    }
+    // }
 
   }
 }

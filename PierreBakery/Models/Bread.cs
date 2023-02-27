@@ -1,17 +1,17 @@
 namespace PierreBakery.Models
 {
-  public class Bread
+  public class Bread : Dough
   {
-    private int _loaf;
-    public int Loaf
-    {
-      get { return _loaf; }
+    // private int _loaf;
+    // public int Loaf
+    // {
+    //   get { return _loaf; }
 
-    }
-    public Bread(int loaf)
+    // }
+    public Bread(int quantity)
     {
-      _loaf = loaf;
-      
+      Quantity = quantity;
+
     }
 
     public int CalculateBreadTotal(int numOfLoaf)
@@ -21,16 +21,34 @@ namespace PierreBakery.Models
       {
         if (i % 3 == 0)
         {
-          totalPrice+=0;
+          totalPrice += 0;
         }
         else
         {
-          totalPrice+=5; 
+          totalPrice += 5;
         }
       }
       return totalPrice;
     }
 
-    
+    //implement caltotal method from dough class
+    public override int CalTotal(int Quantity)
+    {
+      int totalPrice = 0;
+      for (int i = 0; i <= Quantity; i++)
+      {
+        if (i % 3 == 0)
+        {
+          totalPrice += 0;
+        }
+        else
+        {
+          totalPrice += 5;
+        }
+      }
+      return totalPrice;
+    }
+
+
   }
 }

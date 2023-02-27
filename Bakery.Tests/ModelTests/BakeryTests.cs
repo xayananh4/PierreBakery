@@ -17,6 +17,15 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
+    public void GetSide1_ReturnsSide1_Int()
+    {
+      int quantity = 1;
+      Bread newTriangle = new Bread(quantity);
+      int result = newTriangle.Quantity;
+      Assert.AreEqual(quantity, result);
+    }
+
+    [TestMethod]
     public void GetLoaf_ReturnsLoaf_Int()
     {
       int loaf = 1;

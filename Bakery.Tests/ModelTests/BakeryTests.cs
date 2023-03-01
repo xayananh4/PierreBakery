@@ -35,6 +35,17 @@ namespace Bakery.Tests
       int results = newBread.CalTotal(quantity);
       Assert.AreEqual(5, results);
     }
+ 
+    // Test the calulate total with discount applied  
+    public void Cal_Total_DeterminesDiscountPrice_Int()
+    {
+      int quantity = 3;
+      Bread newBread = new Bread(3);
+      int results = newBread.CalTotal(quantity);
+      Assert.AreEqual(10, results);
+    }
+
+
 
     // [TestMethod]
     // public void GetLoaf_ReturnsLoaf_Int()

@@ -35,6 +35,15 @@ namespace Pastries.Tests
       Assert.AreEqual(2, results);
     }
 
+        // Test the calulate total with the discount applied  
+    public void Cal_Total_DeterminesDiscountPrice_Int()
+    {
+      int quantity = 4;
+      Pastry newPastry = new Pastry(4);
+      int results = newPastry.CalTotal(quantity);
+      Assert.AreEqual(6, results);
+    }
+
 
 
 
